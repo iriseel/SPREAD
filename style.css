@@ -8,6 +8,10 @@ html {
     font-size:20px;
 }
 
+body {
+    background:black;
+}
+
 * {
     box-sizing:border-box;
     padding:0;
@@ -41,7 +45,6 @@ html {
 
 img, .text {
     box-sizing:content-box;
-    border: 1px solid black;
     cursor:pointer;
 }
 
@@ -53,8 +56,27 @@ img {
 .text {
     width:70%;
     padding:.5em;
+    background:white;
 }
 
 p {
     margin: .5em 0;
+}
+
+
+.filename {
+    position:fixed;
+    bottom:0;
+    z-index:10;
+    background:black;
+    color:white;
+}
+
+.filename.left {
+    left:0;
+}
+
+
+.filename.right {
+    right:0;
 }

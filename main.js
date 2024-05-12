@@ -1,9 +1,23 @@
 const spread = document.querySelector('.spread');
 let previousIndex1 = null;
+const leftFilename = document.querySelector('.filename.left');
+const rightFilename = document.querySelector('.filename.right');
 
 const scans = [
    "assets/scans/Zhao_Ken-01.png", "assets/scans/Charwey_Simon-01.png", "assets/scans/Charwey_Simon-02.png", "assets/scans/Charwey_Simon-03.png", "assets/scans/Correa_Julio-01.png", "assets/scans/Correa_Julio-02.png", "assets/scans/Correa_Julio-03.png", "assets/scans/Dai_Davy-01.png", "assets/scans/Dai_Davy-02.png", "assets/scans/Dai_Davy-03.png", "assets/scans/Duell_Sara-01.png", "assets/scans/Duell_Sara-02.png", "assets/scans/Duell_Sara-03.png", "assets/scans/Duell_Sara-04.png", "assets/scans/Hawkins_Kayla-01.png", "assets/scans/Hawkins_Kayla-02.png", "assets/scans/Hawkins_Kayla-03.png", "assets/scans/Henderson_Darnell-01.png", "assets/scans/Henderson_Darnell-02.png", "assets/scans/Henderson_Darnell-03.png", "assets/scans/Hu_Junyan-01.png", "assets/scans/Hu_Junyan-02.png", "assets/scans/Hu_Junyan-03.png", "assets/scans/Hungerford_Claire-01.png", "assets/scans/Hungerford_Claire-02.png", "assets/scans/Hungerford_Claire-03.png", "assets/scans/Lee_Kaming-01.png", "assets/scans/Lee_Kaming-02.png", "assets/scans/Lee_Kaming-03.png", "assets/scans/Lee_Siri-01.png", "assets/scans/Lee_Siri-02.png", "assets/scans/Lee_Siri-03.png", "assets/scans/Li_Daedalus-01.png", "assets/scans/Li_Daedalus-02.png", "assets/scans/Li_Daedalus-03.png", "assets/scans/Liu_Lobbin-01.png", "assets/scans/Liu_Lobbin-02.png", "assets/scans/Liu_Lobbin-03.png", "assets/scans/Liu_Xinyi-01.png", "assets/scans/Liu_Xinyi-02.png", "assets/scans/Liu_Xinyi-03.png", "assets/scans/Patel_Neeta-01.png", "assets/scans/Patel_Neeta-02.png", "assets/scans/Patel_Neeta-03.png", "assets/scans/Porras_Orlando-01.png", "assets/scans/Porras_Orlando-02.png", "assets/scans/Porras_Orlando-03.png", "assets/scans/Wang_Qiang-01.png", "assets/scans/Wang_Qiang-02.png", "assets/scans/Wang_Qiang-03.png", "assets/scans/Yu_June-01.png", "assets/scans/Yu_June-02.png"
 ];
+
+// Extract filenames from the image URLs
+const filenames = scans.map(scan => {
+    const parts = scan.split('/');
+    return parts[parts.length - 1]; // Get the last part of the URL which is the filename
+});
+
+const ImageFilenamePairs = scans.map((scan, index) => ({
+    scan: scan,
+    filename: filenames[index]
+}));
+
 
 const texts = [
     "<h1>SPREAD</h1>" + 
@@ -55,7 +69,7 @@ const texts = [
 ]
 
 const contents = [
-    ...scans.map(scan => `<img src="${scan}" alt="Image">`),
+    ...ImageFilenamePairs.map(pair => `<img src="${pair.scan}" alt="${pair.filename}">`),
     ...texts.map(text => `<div class="text">${text}</div>`)
 ];
 
@@ -78,6 +92,15 @@ function populatePages() {
     // Populate left and right pages with random images
     leftPage.innerHTML = contents[randomIndex1];
     rightPage.innerHTML = contents[randomIndex2];
+
+    leftFilename.innerHTML = "";
+    rightFilename.innerHTML = "";
+    if (filenames[randomIndex1]) {
+        leftFilename.innerHTML = filenames[randomIndex1];
+    }
+    if (filenames[randomIndex2]) {
+        rightFilename.innerHTML = filenames[randomIndex2];
+    }
 }
 
 spread.addEventListener('click', populatePages);
@@ -87,8 +110,6 @@ populatePages();
 
 
 // GENERAL FUNCTIONS
-
-
 // Function to generate a random number between min (inclusive) and max (exclusive)
 function getRandomIndex(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
