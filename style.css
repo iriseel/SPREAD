@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Gerstner;
+    src: url(assets/Gerstner_Programm/Gerstner\ Programm\ Regular.otf);
+}
+
+html {
+    font-family: "Gerstner", sans-serif;
+    font-size:20px;
+}
+
+* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+.spread {
+    display:flex;
+    flex-flow: row wrap;
+    overflow:hidden;
+}
+
+.page, .left-page, .right-page {
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.page {
+    width:50%;
+    height:100vh;
+}
+
+.left-page {
+    justify-content: flex-end;
+}
+
+.right-page {
+    justify-content: flex-start;
+}
+
+img, .text {
+    box-sizing:content-box;
+    border: 1px solid black;
+    cursor:pointer;
+}
+
+img {
+    max-width:100%;
+    max-height:100%;
+}
+
+.text {
+    width:70%;
+    padding:.5em;
+}
+
+p {
+    margin: .5em 0;
+}
