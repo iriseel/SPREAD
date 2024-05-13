@@ -1,4 +1,9 @@
 const spread = document.querySelector('.spread');
+const aboutBtn = document.querySelector('.about');
+const scheduleBtn = document.querySelector('.schedule');
+const visitingBtn = document.querySelector('.visiting');
+const popup = document.querySelector('.popup');
+const popupContainer = document.querySelector('.popup .container');
 
 const paginationsLeft = [
     {
@@ -280,11 +285,11 @@ const texts = [
 
 const contentsLeft = [
     ...paginationsLeft.map(pagination => `
+    <img src="${pagination.img}">
     <div class="metadata">
         <div class="title"><span class="black"><i>${pagination.title}</i></span></div>
         <div class="designer"><span class="black">${pagination.designer}</span></div>
     </div>
-    <img src="${pagination.img}">
     <div class="pageNum left">${pagination.pageNum}</div>
     `),
     ...texts.map(text => `<div class="text">${text}</div>`)
@@ -292,11 +297,11 @@ const contentsLeft = [
 
 const contentsRight = [
     ...paginationsRight.map(pagination => `
+    <img src="${pagination.img}">
     <div class="metadata">
         <div class="title"><span class="black"><i>${pagination.title}</i></span></div>
         <div class="designer"><span class="black">${pagination.designer}</span></div>
     </div>
-    <img src="${pagination.img}">
     <div class="pageNum left">${pagination.pageNum}</div>
     `),
     ...texts.map(text => `<div class="text">${text}</div>`)
@@ -330,9 +335,24 @@ function populatePages() {
 }
 
 spread.addEventListener('click', populatePages);
+aboutBtn.addEventListener('mouseenter', () => showPopup(0));
+aboutBtn.addEventListener('mouseout', () => hidePopup());
+scheduleBtn.addEventListener('mouseenter', () => showPopup(1));
+scheduleBtn.addEventListener('mouseout', () => hidePopup());
+visitingBtn.addEventListener('mouseenter', () => showPopup(2));
+visitingBtn.addEventListener('mouseout', () => hidePopup());
 
 // Initially populate the pages with random images
 populatePages();
+
+function showPopup(textIndex) {
+    popup.style.display = "flex";
+    popupContainer.innerHTML = texts[textIndex];
+}
+
+function hidePopup() {
+    popup.style.display = "none";
+}
 
 
 // GENERAL FUNCTIONS
