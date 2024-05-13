@@ -15,7 +15,7 @@ const paginationsLeft = [
         title: "If it's not dead it's growing, even if it's dead it's growing"
     }, {
         img: "assets/paginations/left/07.png",
-        designer: "Daedalus Li",
+        designer: "Daedalus Guoning Li",
         title: "The First Bite of the Sugar Crust, the Last Bite of the Gooey Dough"
     }, {
         img: "assets/paginations/left/09.png",
@@ -155,7 +155,7 @@ const paginationsRight = [
         title: "Local Behavior (or How to Heat Up a Pile of Tortillas)"
     }, {
         img: "assets/paginations/right/24.png",
-        designer: "Daedalus Li",
+        designer: "Daedalus Guoning Li",
         title: "The First Bite of the Sugar Crust, the Last Bite of the Gooey Dough"
     }, {
         img: "assets/paginations/right/26.png",
@@ -187,7 +187,7 @@ const paginationsRight = [
         title: "Local Behavior (or How to Heat Up a Pile of Tortillas)"
     }, {
         img: "assets/paginations/right/40.png",
-        designer: "Daedalus Li",
+        designer: "Daedalus Guoning Li",
         title: "The First Bite of the Sugar Crust, the Last Bite of the Gooey Dough"
     }, {
         img: "assets/paginations/right/42.png",
