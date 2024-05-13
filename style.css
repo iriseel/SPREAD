@@ -33,6 +33,7 @@ body {
 .page {
     width:50%;
     height:100vh;
+    position:relative;
 }
 
 .left-page {
@@ -54,29 +55,67 @@ img {
 }
 
 .text {
-    width:70%;
-    padding:.5em;
+    width:80%;
+    padding:1em;
     background:white;
+    border: 1px solid black;
 }
 
-p {
+ul, h2 {
+    font-size:1.25em;
+}
+
+p, ul, li {
     margin: .5em 0;
 }
 
+li {
+    list-style-type: none;
+    padding-left: 1em;
+}
 
-.filename {
-    position:fixed;
-    bottom:0;
+.block {
+    margin: 1.5em 0;
+}
+
+.pageNum {
+    position:absolute;
+    bottom: 0;
     z-index:10;
-    background:black;
+    font-size:6em;
+    width:100%;
     color:white;
+
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-shadow: 0px 0px 4px black;
+
+    /* background:red; */
 }
 
-.filename.left {
-    left:0;
+.metadata {
+    position:absolute;
+    top: .5em;
+    z-index:10;
+    width:100%;
+    color:rgba(255,255,255,.7);
+
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content:center;
+    text-align:center;
+
+    text-shadow: 0px 0px 2px black;
+    opacity:0;
+    /* transition: opacity .2s; */
 }
 
+.page:hover .metadata {
+    opacity:1;
+}
 
-.filename.right {
-    right:0;
+.black {
+    background:black;
 }

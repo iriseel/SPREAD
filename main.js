@@ -1,23 +1,228 @@
 const spread = document.querySelector('.spread');
-let previousIndex1 = null;
-const leftFilename = document.querySelector('.filename.left');
-const rightFilename = document.querySelector('.filename.right');
 
-const scans = [
-   "assets/scans/Zhao_Ken-01.png", "assets/scans/Charwey_Simon-01.png", "assets/scans/Charwey_Simon-02.png", "assets/scans/Charwey_Simon-03.png", "assets/scans/Correa_Julio-01.png", "assets/scans/Correa_Julio-02.png", "assets/scans/Correa_Julio-03.png", "assets/scans/Dai_Davy-01.png", "assets/scans/Dai_Davy-02.png", "assets/scans/Dai_Davy-03.png", "assets/scans/Duell_Sara-01.png", "assets/scans/Duell_Sara-02.png", "assets/scans/Duell_Sara-03.png", "assets/scans/Duell_Sara-04.png", "assets/scans/Hawkins_Kayla-01.png", "assets/scans/Hawkins_Kayla-02.png", "assets/scans/Hawkins_Kayla-03.png", "assets/scans/Henderson_Darnell-01.png", "assets/scans/Henderson_Darnell-02.png", "assets/scans/Henderson_Darnell-03.png", "assets/scans/Hu_Junyan-01.png", "assets/scans/Hu_Junyan-02.png", "assets/scans/Hu_Junyan-03.png", "assets/scans/Hungerford_Claire-01.png", "assets/scans/Hungerford_Claire-02.png", "assets/scans/Hungerford_Claire-03.png", "assets/scans/Lee_Kaming-01.png", "assets/scans/Lee_Kaming-02.png", "assets/scans/Lee_Kaming-03.png", "assets/scans/Lee_Siri-01.png", "assets/scans/Lee_Siri-02.png", "assets/scans/Lee_Siri-03.png", "assets/scans/Li_Daedalus-01.png", "assets/scans/Li_Daedalus-02.png", "assets/scans/Li_Daedalus-03.png", "assets/scans/Liu_Lobbin-01.png", "assets/scans/Liu_Lobbin-02.png", "assets/scans/Liu_Lobbin-03.png", "assets/scans/Liu_Xinyi-01.png", "assets/scans/Liu_Xinyi-02.png", "assets/scans/Liu_Xinyi-03.png", "assets/scans/Patel_Neeta-01.png", "assets/scans/Patel_Neeta-02.png", "assets/scans/Patel_Neeta-03.png", "assets/scans/Porras_Orlando-01.png", "assets/scans/Porras_Orlando-02.png", "assets/scans/Porras_Orlando-03.png", "assets/scans/Wang_Qiang-01.png", "assets/scans/Wang_Qiang-02.png", "assets/scans/Wang_Qiang-03.png", "assets/scans/Yu_June-01.png", "assets/scans/Yu_June-02.png"
+const paginationsLeft = [
+    {
+        img: "assets/paginations/left/01.png",
+        designer: "Sara Duell",
+        title: "Notes for Rehearsal",
+    }, {
+        img: "assets/paginations/left/03.png",
+        designer: "Simon Charwey",
+        title: "Design by Chance, Chance by Design"
+    }, {
+        img: "assets/paginations/left/05.png",
+        designer: "Siri Lee",
+        title: "If it's not dead it's growing, even if it's dead it's growing"
+    }, {
+        img: "assets/paginations/left/07.png",
+        designer: "Daedalus Li",
+        title: "The First Bite of the Sugar Crust, the Last Bite of the Gooey Dough"
+    }, {
+        img: "assets/paginations/left/09.png",
+        designer: "Neeta Patel",
+        title: "What I Talk About When I Talk About Design"
+    }, {
+        img: "assets/paginations/left/11.png",
+        designer: "Davy Dai",
+        title: "square"
+    }, {
+        img: "assets/paginations/left/13.png",
+        designer: "Xinyi Liu",
+        title: "NPC in RPG"
+    }, {
+        img: "assets/paginations/left/15.png",
+        designer: "Siri Lee",
+        title: "If it's not dead it's growing, even if it's dead it's growing"
+    }, {
+        img: "assets/paginations/left/17.png",
+        designer: "Kaming Lee",
+        title: "Stir Fry Slow Stew"
+    }, {
+        img: "assets/paginations/left/19.png",
+        designer: "Julio Correa Estrada",
+        title: "Long time listener, first time caller"
+    }, {
+        img: "assets/paginations/left/21.png",
+        designer: "Siri Lee",
+        title: "If it's not dead it's growing, even if it's dead it's growing"
+    }, {
+        img: "assets/paginations/left/23.png",
+        designer: "Qiang Wang",
+        title: "113,282 Links from Browsing History and 123 Images of Trash"
+    }, {
+        img: "assets/paginations/left/25.png",
+        designer: "Kayla Hawkins",
+        title: "Still Becoming"
+    }, {
+        img: "assets/paginations/left/27.png",
+        designer: "Davy Dai",
+        title: "square"
+    }, {
+        img: "assets/paginations/left/29.png",
+        designer: "Ken Wenrui Zhao",
+        title: "Spring... Too Long..."
+    }, {
+        img: "assets/paginations/left/31.png",
+        designer: "Sara Duell",
+        title: "Notes for Rehearsal"
+    }, {
+        img: "assets/paginations/left/33.png",
+        designer: "Qiang Wang",
+        title: "113,282 Links from Browsing History and 123 Images of Trash"
+    }, {
+        img: "assets/paginations/left/35.png",
+        designer: "Davy Dai",
+        title: "square"
+    }, {
+        img: "assets/paginations/left/37.png",
+        designer: "Xinyi Liu",
+        title: "NPC in RPG"
+    }, {
+        img: "assets/paginations/left/39.png",
+        designer: "Simon Charwey",
+        title: "Design by Chance, Chance by Design"
+    }, {
+        img: "assets/paginations/left/41.png",
+        designer: "Xinyi Liu",
+        title: "NPC in RPG"
+    }, {
+        img: "assets/paginations/left/43.png",
+        designer: "Orlando Porras",
+        title: "Local Behavior (or How to Heat Up a Pile of Tortillas)"
+    }, {
+        img: "assets/paginations/left/45.png",
+        designer: "Claire Hungerford",
+        title: "Today was a very bad day! And other storys"
+    }, {
+        img: "assets/paginations/left/47.png",
+        designer: "Julio Correa Estrada",
+        title: "Long time listener, first time caller"
+    }, {
+        img: "assets/paginations/left/49.png",
+        designer: "Claire Hungerford",
+        title: "Today was a very bad day! And other storys"
+    }, {
+        img: "assets/paginations/left/51.png",
+        designer: "Darnell Henderson",
+        title: "Everything Must Stay"
+    } 
 ];
 
-// Extract filenames from the image URLs
-const filenames = scans.map(scan => {
-    const parts = scan.split('/');
-    return parts[parts.length - 1]; // Get the last part of the URL which is the filename
+const paginationsRight = [
+    {
+        img: "assets/paginations/right/02.png",
+        designer: "Lobbin Liu",
+        title: "scraps. scripts, but"
+    }, {
+        img: "assets/paginations/right/04.png",
+        designer: "Kaming Lee",
+        title: "Stir Fry Slow Stew"
+    }, {
+        img: "assets/paginations/right/06.png",
+        designer: "June Lihua Yu",
+        title: "The Story of a Feeling"
+    }, {
+        img: "assets/paginations/right/08.png",
+        designer: "Darnell Henderson",
+        title: "Everything Must Stay"
+    }, {
+        img: "assets/paginations/right/10.png",
+        designer: "Claire Hungerford",
+        title: "Today was a very bad day! And other storys"
+    }, {
+        img: "assets/paginations/right/12.png",
+        designer: "Simon Charwey",
+        title: "Design by Chance, Chance by Design"
+    }, {
+        img: "assets/paginations/right/14.png",
+        designer: "Lobbin Liu",
+        title: "scraps. scripts, but"
+    }, {
+        img: "assets/paginations/right/16.png",
+        designer: "Julio Correa Estrada",
+        title: "Long time listener, first time caller"
+    }, {
+        img: "assets/paginations/right/18.png",
+        designer: "Neeta Patel",
+        title: "What I Talk About When I Talk About Design"
+    }, {
+        img: "assets/paginations/right/20.png",
+        designer: "Junyan Hu",
+        title: "Surface Tension"
+    }, {
+        img: "assets/paginations/right/22.png",
+        designer: "Orlando Porras",
+        title: "Local Behavior (or How to Heat Up a Pile of Tortillas)"
+    }, {
+        img: "assets/paginations/right/24.png",
+        designer: "Daedalus Li",
+        title: "The First Bite of the Sugar Crust, the Last Bite of the Gooey Dough"
+    }, {
+        img: "assets/paginations/right/26.png",
+        designer: "Darnell Henderson",
+        title: "Everything Must Stay"
+    }, {
+        img: "assets/paginations/right/28.png",
+        designer: "Junyan Hu",
+        title: "Surface Tension"
+    }, {
+        img: "assets/paginations/right/30.png",
+        designer: "Ken Wenrui Zhao",
+        title: "Spring... Too Long..."
+    }, {
+        img: "assets/paginations/right/32.png",
+        designer: "Kayla Hawkins",
+        title: "Still Becoming"
+    }, {
+        img: "assets/paginations/right/34.png",
+        designer: "Kaming Lee",
+        title: "Stir Fry Slow Stew"
+    }, {
+        img: "assets/paginations/right/36.png",
+        designer: "June Lihua Yu",
+        title: "The Story of a Feeling"
+    }, {
+        img: "assets/paginations/right/38.png",
+        designer: "Orlando Porras",
+        title: "Local Behavior (or How to Heat Up a Pile of Tortillas)"
+    }, {
+        img: "assets/paginations/right/40.png",
+        designer: "Daedalus Li",
+        title: "The First Bite of the Sugar Crust, the Last Bite of the Gooey Dough"
+    }, {
+        img: "assets/paginations/right/42.png",
+        designer: "Neeta Patel",
+        title: "What I Talk About When I Talk About Design"
+    }, {
+        img: "assets/paginations/right/44.png",
+        designer: "June Lihua Yu",
+        title: "The Story of a Feeling"
+    }, {
+        img: "assets/paginations/right/46.png",
+        designer: "Qiang Wang",
+        title: "113,282 Links from Browsing History and 123 Images of Trash"
+    }, {
+        img: "assets/paginations/right/48.png",
+        designer: "Lobbin Liu",
+        title: "scraps. scripts, but"
+    }, {
+        img: "assets/paginations/right/50.png",
+        designer: "Junyan Hu",
+        title: "Surface Tension"
+    }, {
+        img: "assets/paginations/right/52.png",
+        designer: "Kayla Hawkins",
+        title: "Still Becoming"
+    }
+]
+
+// Iterate over paginationsLeft to add pageNum property
+paginationsLeft.forEach(pagination => {
+    pagination.pageNum = findPageNum(pagination.img);
 });
-
-const ImageFilenamePairs = scans.map((scan, index) => ({
-    scan: scan,
-    filename: filenames[index]
-}));
-
+paginationsRight.forEach(pagination => {
+    pagination.pageNum = findPageNum(pagination.img);
+});
 
 const texts = [
     "<h1>SPREAD</h1>" + 
@@ -25,11 +230,12 @@ const texts = [
     
     "<p>May 13 – 21, 2024</p>" +
     "<p>Public reception on Saturday, May 18 from 6–8PM</p>" +
-    "<p>With programming throughout May 16–18 (see full schedule below)</p>" +
-    
-    "<p>Spread: a technical term in graphic design, refers to two adjacent pages whose connection is revealed as one opens a book. A paired set, hinged at its shared edge, the spread functions much like a diptych––perpetually in relation. We open up spreads, and they open up for us. Like the spread, we have found ourselves and our practices momentarily fixed to one another, fastened into relation, our perspectives fused together, like the left eye and the right eye.</p>" +
-    
-    "<p>SPREAD features work by the 2024 MFA candidates in Graphic Design presented in conversation with one another, reproducing and remixing the culmination of our time––our thesis books––in order to amplify our connections and expand the definition of graphic design as a way of relating. The polysemic title also functions as an invitation: as a verb, SPREAD further expresses our collective desire to share this work outside of the graphic design program through additional public programming during and after the exhibition.</p>" +
+    "<p>With programming throughout May 16–18</p>" +
+
+    "<div class='block'>" +
+        "<p>Spread: a technical term in graphic design, refers to two adjacent pages whose connection is revealed as one opens a book. A paired set, hinged at its shared edge, the spread functions much like a diptych &ndash; perpetually in relation. We open up spreads, and they open up for us. Like the spread, we have found ourselves and our practices momentarily fixed to one another, fastened into relation, our perspectives fused together, like the left eye and the right eye.</p>" +
+        "<p>SPREAD features work by the 2024 MFA candidates in Graphic Design presented in conversation with one another, reproducing and remixing the culmination of our time &ndash; our thesis books &ndash; in order to amplify our connections and expand the definition of graphic design as a way of relating. The polysemic title also functions as an invitation: as a verb, SPREAD further expresses our collective desire to share this work outside of the graphic design program through additional public programming during and after the exhibition.</p>" +
+    "</div>" +
     
     "<p>Featuring work by Simon Charwey, Julio Correa Estrada, Davy Dai, Sara Duell, Kayla Hawkins, Darnell Henderson, Junyan Hu, Claire Hungerford, Kaming Lee, Siri Lee, Daedalus Guoning Li, Lobbin Liu, Xinyi Liu, Neeta Patel, Orlando Porras, June Lihua Yu, Qiang Wang, and Ken Wenrui Zhao.</p>",
 
@@ -37,43 +243,67 @@ const texts = [
 
     "<h1>PROGRAM SCHEDULE, MAY 16–18, 2024</h1>" +
 
-    "<p>May 16–18: Durational performances between 1PM–6PM</p>" +
+    "<ul>May 16–18: Durational performances between 1PM–6PM</ul>" +
 
-    "<p>The Laminator & the Shapeshifter: A Durational Performance by Daedalus Guoning Li</p>" +
-    "<p>Notes for Rehearsal. Production and distribution of thesis books with Sara Duell</p>" +
-    "<p>Stir Fry/Slow Stew conversations with Kaming Lee and guests</p>" +
-    "<p>Candlelit reading of The Diaries of Cai Yongchun with Siri Lee</p>" +
-    "<p>Herbal Tea Tasting with Kayla Hawkins</p>" +
-    "<p>Chance-based Musical Composition with Simon Charwey and guests</p>" +
+    "<li>The Laminator & the Shapeshifter: A Durational Performance by Daedalus Guoning Li</li>" +
+    "<li>Notes for Rehearsal. Production and distribution of thesis books with Sara Duell</li>" +
+    "<li>Stir Fry/Slow Stew — conversations with Kaming Lee and guests</li>" +
+    "<li>Candlelit reading of <i>The Diaries of Cai Yongchun</i> with Siri Lee</li>" +
+    "<li>Herbal Tea Tasting with Kayla Hawkins</li>" +
+    "<li>Chance-based Musical Composition with Simon Charwey and guests</li>" +
 
-    "<p>May 17: Evening programming between 6-8PM</p>" +
+    "<ul>May 17: Evening programming between 6-8PM</ul>" +
 
-    "<p>Screening of Today was a Very Bad Day with Claire Hungerford</p>" +
-    "<p>Screening of Spring... Too Long... by Ken Wenrui Zhao</p>" +
-    "<p>Everything Must Stay! a talk by Darnell Henderson</p>" +
-    "<p>Here I am Pressing Buttons a talk by Junyan Hu</p>" +
-    "<p>Musical Set with Xinyi Liu and guest</p>" +
-    "<p>Scraps, Scripts, but a talk by Lobbin Liu</p>" +
-    "<p>Screening of Confessions by Qiang Wang.</p>" +
-    "<p>Long Time Listener, First Time Caller a presentation by Julio Correa Estrada</p>" +
-    "<p>Yale by Yale presented by Orlando Porras and Darby Routtenberg</p>",
+    "<li>Screening of Today was a Very Bad Day with Claire Hungerford</li>" +
+    "<li>Screening of <i>Spring... Too Long...</i> by Ken Wenrui Zhao</li>" +
+    "<li>Everything Must Stay! — a talk by Darnell Henderson</li>" +
+    "<li>Here I am Pressing Buttons — a talk by Junyan Hu</li>" +
+    "<li>Musical Set with Xinyi Liu and guest</li>" +
+    "<li>Scraps, Scripts, but — a talk by Lobbin Liu</li>" +
+    "<li>Screening of Confessions by Qiang Wang.</li>" +
+    "<li>Long Time Listener, First Time Caller — a presentation by Julio Correa Estrada</li>" +
+    "<li>Yale by Yale presented by Orlando Porras and Darby Routtenberg</li>",
 
     ////////////////////////////////////////////////
 
     "<h1>VISITING</h1>" +
     "<p>Yale School of Art’s Spring 2024 receptions are open to the public. All visitors are encouraged to be fully vaccinated and boosted. Masks are also recommended.</p>" +
 
-    "<p>During all other gallery hours, exhibitions are only open to the Yale community (current ID holders) and their invited, accompanied guests. Spring 2024 gallery hours for the Yale community & guests: Monday-Friday: 11AM-6PM, Saturday + Sunday: Noon-4PM.</p>"
-        
+    "<p>During all other gallery hours, exhibitions are only open to the Yale community (current ID holders) and their invited, accompanied guests.</p>" +
+    
+    "<div class='block'>" +
+        "<p>Spring 2024 gallery hours for the Yale community & guests:</p>" +
+        "<p>Monday-Friday: 11AM-6PM, Saturday + Sunday: Noon-4PM.</p>" + 
+    "</div>"
 
 ]
 
-const contents = [
-    ...ImageFilenamePairs.map(pair => `<img src="${pair.scan}" alt="${pair.filename}">`),
+const contentsLeft = [
+    ...paginationsLeft.map(pagination => `
+    <div class="metadata">
+        <div class="title"><span class="black"><i>${pagination.title}</i></span></div>
+        <div class="designer"><span class="black">${pagination.designer}</span></div>
+    </div>
+    <img src="${pagination.img}">
+    <div class="pageNum left">${pagination.pageNum}</div>
+    `),
     ...texts.map(text => `<div class="text">${text}</div>`)
 ];
 
-// console.log(contents);
+const contentsRight = [
+    ...paginationsRight.map(pagination => `
+    <div class="metadata">
+        <div class="title"><span class="black"><i>${pagination.title}</i></span></div>
+        <div class="designer"><span class="black">${pagination.designer}</span></div>
+    </div>
+    <img src="${pagination.img}">
+    <div class="pageNum left">${pagination.pageNum}</div>
+    `),
+    ...texts.map(text => `<div class="text">${text}</div>`)
+];
+
+// console.log(contentsLeft);
+// console.log(contentsRight);
 
 // Function to populate left and right pages with random images
 function populatePages() {
@@ -81,26 +311,22 @@ function populatePages() {
     const rightPage = document.querySelector('.right-page');
 
     // Generate random indices for images
-    const randomIndex1 = getRandomIndexWithProbability(0, contents.length, [52, 53, 54], 0.3, previousIndex1);
+    const randomIndex1 = getRandomIndexWithProbability(0, contentsLeft.length, [26, 27, 28], 0.3);
     let randomIndex2;
-    do {
-        randomIndex2 = getRandomIndex(0, contents.length);
-    } while (randomIndex2 === randomIndex1);
 
-    previousIndex1 = randomIndex1;
+    // If randomIndex1 is 26, 27, or 28 (one of the texts), generate randomIndex2 excluding the same number
+    if (randomIndex1 === 26 || randomIndex1 === 27 || randomIndex1 === 28) {
+        do {
+            randomIndex2 = getRandomIndexWithProbability(0, contentsRight.length, [26, 27, 28], 0.3);
+        } while (randomIndex2 === randomIndex1);
+    } else {
+        randomIndex2 = getRandomIndexWithProbability(0, contentsRight.length, [26, 27, 28], 0.3);
+    }
+
 
     // Populate left and right pages with random images
-    leftPage.innerHTML = contents[randomIndex1];
-    rightPage.innerHTML = contents[randomIndex2];
-
-    leftFilename.innerHTML = "";
-    rightFilename.innerHTML = "";
-    if (filenames[randomIndex1]) {
-        leftFilename.innerHTML = filenames[randomIndex1];
-    }
-    if (filenames[randomIndex2]) {
-        rightFilename.innerHTML = filenames[randomIndex2];
-    }
+    leftPage.innerHTML = contentsLeft[randomIndex1];
+    rightPage.innerHTML = contentsRight[randomIndex2];
 }
 
 spread.addEventListener('click', populatePages);
@@ -115,13 +341,16 @@ function getRandomIndex(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function getRandomIndexWithProbability(min, max, targetIndices, probability, previousIndex1) {
-    let availableIndices = Array.from({ length: max - min }, (_, i) => i + min); // Generate an array of available indices
+// Extract pageNums from the image URLs
+function findPageNum(img) {
+    const parts = img.split('/');
+    const pageNumWithExtension = parts[parts.length - 1];
+    const pageNumWithoutExtension = pageNumWithExtension.split('.')[0]; // Get the part before the '.png'
+    return pageNumWithoutExtension;
+}
 
-    // Remove previousIndex from availableIndices if it's not null
-    if (previousIndex1 !== null) {
-        availableIndices = availableIndices.filter(index => index !== previousIndex1);
-    }
+function getRandomIndexWithProbability(min, max, targetIndices, probability) {
+    let availableIndices = Array.from({ length: max - min }, (_, i) => i + min); // Generate an array of available indices
 
     // Generate a random number to decide whether to return a target index or a random index
     if (Math.random() < probability) {
