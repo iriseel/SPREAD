@@ -230,33 +230,36 @@ paginationsRight.forEach(pagination => {
 });
 
 const texts = [
-    "<h1>SPREAD</h1>" + 
-    "<p>2024 MFA Thesis Exhibition in Graphic Design</p>" +
+    "<p>SPREAD<br>" + 
+    "2024 MFA Thesis Show in Graphic Design</p>" +
     
-    "<p>May 13 – 21, 2024</p>" +
-    "<p>Public reception on Saturday, May 18 from 6–8PM</p>" +
-    "<p>With programming throughout May 16–18</p>" +
+    "<p>May 13&ndash;21, 2024<br>" +
+    "Public reception on Saturday, May 18 from 6&ndash;8PM<br>" +
+    "With programming throughout May 16&ndash;18</p>" +
 
     "<div class='block'>" +
-        "<p>Spread: a technical term in graphic design, refers to two adjacent pages whose connection is revealed as one opens a book. A paired set, hinged at its shared edge, the spread functions much like a diptych &ndash; perpetually in relation. We open up spreads, and they open up for us. Like the spread, we have found ourselves and our practices momentarily fixed to one another, fastened into relation, our perspectives fused together, like the left eye and the right eye.</p>" +
-        "<p>SPREAD features work by the 2024 MFA candidates in Graphic Design presented in conversation with one another, reproducing and remixing the culmination of our time &ndash; our thesis books &ndash; in order to amplify our connections and expand the definition of graphic design as a way of relating. The polysemic title also functions as an invitation: as a verb, SPREAD further expresses our collective desire to share this work outside of the graphic design program through additional public programming during and after the exhibition.</p>" +
+        "<p>Spread: a technical term in graphic design, refers to two adjacent pages whose connection is revealed as one opens a book. A paired set, hinged at its shared edge, the spread functions much like a diptych &mdash; perpetually in relation. We open up spreads, and they open up for us. Like the spread, we have found ourselves and our practices momentarily fixed to one another, fastened into relation, our perspectives fused together, like the left eye and the right eye.</p>" +
+        "<p>SPREAD features work by the 2024 MFA candidates in Graphic Design presented in conversation with one another, reproducing and remixing the culmination of our time &mdash; our thesis books &mdash; in order to amplify our connections and expand the definition of graphic design as a way of relating. The polysemic title also functions as an invitation: as a verb, SPREAD further expresses our collective desire to share this work outside of the graphic design program through additional public programming during and after the exhibition.</p>" +
     "</div>" +
     
     "<p>Featuring work by Simon Charwey, Julio Correa Estrada, Davy Dai, Sara Duell, Kayla Hawkins, Darnell Henderson, Junyan Hu, Claire Hungerford, Kaming Lee, Siri Lee, Daedalus Guoning Li, Lobbin Liu, Xinyi Liu, Neeta Patel, Orlando Porras, June Lihua Yu, Qiang Wang, and Ken Wenrui Zhao.</p>",
 
     ////////////////////////////////////////////////
 
-    "<h1>PROGRAM SCHEDULE, MAY 16–18, 2024</h1>" +
+    "<h1>Program Schedule, May 16–18, 2024</h1>" +
 
+    
+    "<div class='block'>" +
     "<ul>May 16–18: Durational performances between 1PM–6PM</ul>" +
 
     "<li>The Laminator & the Shapeshifter: A Durational Performance by Daedalus Guoning Li</li>" +
     "<li>Notes for Rehearsal. Production and distribution of thesis books with Sara Duell</li>" +
     "<li>Stir Fry/Slow Stew — conversations with Kaming Lee and guests</li>" +
-    "<li>Candlelit reading of <i>The Diaries of Cai Yongchun</i> with Siri Lee</li>" +
     "<li>Herbal Tea Tasting with Kayla Hawkins</li>" +
-    "<li>Chance-based Musical Composition with Simon Charwey and guests</li>" +
+    "<li>Chance-based Musical Composition with Simon Charwey and guests</li>" + 
+    "</div>" +
 
+    "<div class='block'>" +
     "<ul>May 17: Evening programming between 6-8PM</ul>" +
 
     "<li>Screening of Today was a Very Bad Day with Claire Hungerford</li>" +
@@ -267,18 +270,19 @@ const texts = [
     "<li>Scraps, Scripts, but — a talk by Lobbin Liu</li>" +
     "<li>Screening of Confessions by Qiang Wang.</li>" +
     "<li>Long Time Listener, First Time Caller — a presentation by Julio Correa Estrada</li>" +
-    "<li>Yale by Yale presented by Orlando Porras and Darby Routtenberg</li>",
+    "<li>Yale by Yale presented by Orlando Porras and Darby Routtenberg</li>" + 
+    "</div>",
 
     ////////////////////////////////////////////////
 
-    "<h1>VISITING</h1>" +
+    "<h1>Visiting</h1>" +
     "<p>Yale School of Art’s Spring 2024 receptions are open to the public. All visitors are encouraged to be fully vaccinated and boosted. Masks are also recommended.</p>" +
 
     "<p>During all other gallery hours, exhibitions are only open to the Yale community (current ID holders) and their invited, accompanied guests.</p>" +
     
     "<div class='block'>" +
-        "<p>Spring 2024 gallery hours for the Yale community & guests:</p>" +
-        "<p>Monday-Friday: 11AM-6PM, Saturday + Sunday: Noon-4PM.</p>" + 
+        "<p>Spring 2024 gallery hours for the Yale community & guests:<br>" +
+        "Monday&ndash;Friday: 11AM&ndash;6PM, Saturday + Sunday: Noon&ndash;4PM.</p>" + 
     "</div>"
 
 ]
