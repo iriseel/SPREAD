@@ -255,13 +255,13 @@ const texts = [
 
     "<li>2 – 3 pm</li>" +
     "<li>Floor 1 &emsp; Ground</li>" +
-    "<li>Decompression </li>" +
+    "<li><i>Decompression</i></li>" +
     "<li>with Kayla Hawkins</li>" + 
     "<br>" +
 
     "<li>3 – 5 pm</li>" +
     "<li>Floor 2 Mezzanine</li>" +
-    "<li>Notes for Rehearsal. Production and Distribution of thesis books</li>" +
+    "<li><i>Notes for Rehearsal. Production and Distribution of thesis books</i></li>" +
     "<li>with Sara Duell</li>" + 
     "<br>" +
 
@@ -272,67 +272,67 @@ const texts = [
 
     "<li>3 – 5 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Notes for Rehearsal. Production and Distribution of thesis books</li>" +
+    "<li><i>Notes for Rehearsal. Production and Distribution of thesis books</i></li>" +
     "<li>with Sara Duell</li>" + 
     "<br>" +
 
     "<li>5 – 6 pm</li>" +
     "<li>Floor 1 G</li>" +
-    "<li>Chance-based Musical Composition with Healing Drummers in collaboration </li>" +
+    "<li><i>Chance-based Musical Composition with Healing Drummers in collaboration</i></li>" +
     "<li>with Simon Charway and the Signature Musical Drums Trope (Michael Mills and Brian Jawara Gray)</li>" + 
     "<br>" +
 
     "<li>6 – 6 : 15 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Screening of Spring... Too Long...</li>" +
+    "<li><i>Screening of Spring... Too Long...</i></li>" +
     "<li>with Ken Wenrui Zhao</li>" + 
     "<br>" +
 
     "<li>6 : 15 – 6 : 30 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>SML CONFESSIONS</li>" +
+    "<li><i>SML CONFESSIONS</i></li>" +
     "<li>with Qiang Wang</li>" + 
     "<br>" +
 
     "<li> 6 : 30 – 6 : 45 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Everything Must Stay!</li>" +
+    "<li><i>Everything Must Stay!</i></li>" +
     "<li>with Darnell Henderson</li>" + 
     "<br>" +
 
     "<li>6 : 45 – 7 : 00 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Here I am Pressing Buttons</li>" +
+    "<li><i>Here I am Pressing Buttons</i></li>" +
     "<li>with Junyan Hu</li>" + 
     "<br>" +
 
     "<li>7 : 15 – 7 : 30 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Today was a Very Bad Day</li>" +
+    "<li><i>Today was a Very Bad Day</i></li>" +
     "<li>with Claire Hungerford</li>" + 
     "<br>" +
 
     "<li>7 : 30 – 7 : 45 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Long Time Listener, First Time Caller</li>" +
+    "<li><i>Long Time Listener, First Time Caller</i></li>" +
     "<li>with Julio Correa Estrada</li>" + 
     "<br>" +
 
     "<li>7 : 45 – 8 : 00 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Scraps, Scripts, but</li>" +
+    "<li><i>Scraps, Scripts, but</i></li>" +
     "<li>with Lobbin Liu</li>" + 
     "<br>" +
 
     "<li>8 : 15 – 8 : 30 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Suite for Sandbox</li>" +
+    "<li><i>Suite for Sandbox</i></li>" +
     "<li>with Xinyi Liu and Joesph Ehrenpreis</li>" + 
     "<br>" +
 
     "<li>8 : 30 pm</li>" +
     "<li>Floor 3 Basement</li>" +
-    "<li>Yale by Yale</li>" +
+    "<li><i>Yale by Yale</i></li>" +
     "<li>presented by Orlando Porras and Darby Routtenberg</li>" + 
     "<br>" +
 
@@ -343,13 +343,13 @@ const texts = [
 
     "<li>9am – 1 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>The Laminator & the Shapeshifter: A Durational Performance </li>" +
+    "<li><i>The Laminator & the Shapeshifter: A Durational Performance</i></li>" +
     "<li>with Daedalus Guoning Li</li>" + 
     "<br>" +
 
     "<li>3 – 5 pm</li>" +
     "<li>Floor 2 M</li>" +
-    "<li>Notes for Rehearsal. Production and Distribution of thesis books</li>" +
+    "<li><i>Notes for Rehearsal. Production and Distribution of thesis books</i></li>" +
     "<li>with Sara Duell</li>" + 
     "<br>" +
 
