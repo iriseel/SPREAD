@@ -28,7 +28,7 @@ body {
     text-transform: capitalize;
 }
 
-.about, .schedule, .visiting {
+.about, .schedule, .visiting, .closePopup {
     cursor: pointer;
 }
 
@@ -36,6 +36,9 @@ body {
     color:black;
 }
 
+.popup, .text {
+    scrollbar-width: thin;
+}
 
 .popup {
     position:fixed;
@@ -46,12 +49,22 @@ body {
     height: 100%;
     display:none;
     background:#808080;
-    flex-flow: row wrap;
+    overflow-y:scroll;
+    /* flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    scrollbar-color: white transparent;
+}
+
+.closePopup {
+    position:fixed;
+    top:.5em;
+    right:.5em;
+    height:1em;
 }
 
 .popup .container {
+    margin-top:6em;
     width:50%;
     padding: .5em;
 }
@@ -100,7 +113,6 @@ img {
     border: 1px solid black;
     overflow-y:scroll;
     scrollbar-color: #808080 transparent;
-    scrollbar-width: thin;
     color:black;
 }
 
@@ -180,5 +192,4 @@ li {
     html {
         font-size:14px;
     }
-    
 }

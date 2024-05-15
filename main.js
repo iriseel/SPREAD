@@ -4,6 +4,7 @@ const scheduleBtn = document.querySelector('.schedule');
 const visitingBtn = document.querySelector('.visiting');
 const popup = document.querySelector('.popup');
 const popupContainer = document.querySelector('.popup .container');
+const closePopupBtn = document.querySelector('.closePopup');
 
 const paginationsLeft = [
     {
@@ -250,28 +251,113 @@ const texts = [
 
     
     "<div class='block'>" +
-    "<ul>May 16–18: Durational performances between 1PM–6PM</ul>" +
+    "<ul>May 16 Thursday</ul>" +
 
-    "<li>The Laminator & the Shapeshifter: A Durational Performance by Daedalus Guoning Li</li>" +
-    "<li>Notes for Rehearsal. Production and distribution of thesis books with Sara Duell</li>" +
-    "<li>Stir Fry/Slow Stew — conversations with Kaming Lee and guests</li>" +
-    "<li>Herbal Tea Tasting with Kayla Hawkins</li>" +
-    "<li>Chance-based Musical Composition with Simon Charwey and guests</li>" + 
+    "<li>2 – 3 pm</li>" +
+    "<li>Floor 1 &emsp; Ground</li>" +
+    "<li>Decompression </li>" +
+    "<li>with Kayla Hawkins</li>" + 
+    "<br>" +
+
+    "<li>3 – 5 pm</li>" +
+    "<li>Floor 2 Mezzanine</li>" +
+    "<li>Notes for Rehearsal. Production and Distribution of thesis books</li>" +
+    "<li>with Sara Duell</li>" + 
+    "<br>" +
+
     "</div>" +
 
     "<div class='block'>" +
-    "<ul>May 17: Evening programming between 6-8PM</ul>" +
+    "<ul>May 17 Friday</ul>" +
 
-    "<li>Screening of Today was a Very Bad Day with Claire Hungerford</li>" +
-    "<li>Screening of <i>Spring... Too Long...</i> by Ken Wenrui Zhao</li>" +
-    "<li>Everything Must Stay! — a talk by Darnell Henderson</li>" +
-    "<li>Here I am Pressing Buttons — a talk by Junyan Hu</li>" +
-    "<li>Musical Set with Xinyi Liu and guest</li>" +
-    "<li>Scraps, Scripts, but — a talk by Lobbin Liu</li>" +
-    "<li>Screening of Confessions by Qiang Wang.</li>" +
-    "<li>Long Time Listener, First Time Caller — a presentation by Julio Correa Estrada</li>" +
-    "<li>Yale by Yale presented by Orlando Porras and Darby Routtenberg</li>" + 
-    "</div>",
+    "<li>3 – 5 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Notes for Rehearsal. Production and Distribution of thesis books</li>" +
+    "<li>with Sara Duell</li>" + 
+    "<br>" +
+
+    "<li>5 – 6 pm</li>" +
+    "<li>Floor 1 G</li>" +
+    "<li>Chance-based Musical Composition with Healing Drummers in collaboration </li>" +
+    "<li>with Simon Charway and the Signature Musical Drums Trope (Michael Mills and Brian Jawara Gray)</li>" + 
+    "<br>" +
+
+    "<li>6 – 6 : 15 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Screening of Spring... Too Long...</li>" +
+    "<li>with Ken Wenrui Zhao</li>" + 
+    "<br>" +
+
+    "<li>6 : 15 – 6 : 30 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>SML CONFESSIONS</li>" +
+    "<li>with Qiang Wang</li>" + 
+    "<br>" +
+
+    "<li> 6 : 30 – 6 : 45 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Everything Must Stay!</li>" +
+    "<li>with Darnell Henderson</li>" + 
+    "<br>" +
+
+    "<li>6 : 45 – 7 : 00 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Here I am Pressing Buttons</li>" +
+    "<li>with Junyan Hu</li>" + 
+    "<br>" +
+
+    "<li>7 : 15 – 7 : 30 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Today was a Very Bad Day</li>" +
+    "<li>with Claire Hungerford</li>" + 
+    "<br>" +
+
+    "<li>7 : 30 – 7 : 45 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Long Time Listener, First Time Caller</li>" +
+    "<li>with Julio Correa Estrada</li>" + 
+    "<br>" +
+
+    "<li>7 : 45 – 8 : 00 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Scraps, Scripts, but</li>" +
+    "<li>with Lobbin Liu</li>" + 
+    "<br>" +
+
+    "<li>8 : 15 – 8 : 30 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Suite for Sandbox</li>" +
+    "<li>with Xinyi Liu and Joesph Ehrenpreis</li>" + 
+    "<br>" +
+
+    "<li>8 : 30 pm</li>" +
+    "<li>Floor 3 Basement</li>" +
+    "<li>Yale by Yale</li>" +
+    "<li>presented by Orlando Porras and Darby Routtenberg</li>" + 
+    "<br>" +
+
+    "</div>" +
+
+    "<div class='block'>" +
+    "<ul>May 18 Saturday</ul>" +
+
+    "<li>9am – 1 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>The Laminator & the Shapeshifter: A Durational Performance </li>" +
+    "<li>with Daedalus Guoning Li</li>" + 
+    "<br>" +
+
+    "<li>3 – 5 pm</li>" +
+    "<li>Floor 2 M</li>" +
+    "<li>Notes for Rehearsal. Production and Distribution of thesis books</li>" +
+    "<li>with Sara Duell</li>" + 
+    "<br>" +
+
+    "<li>6 – 8 pm</li>" +
+    "<li>Thesis Show Reception</li>" +
+    "<li>Free And Open To The Public</li>" +
+    "<br>",
+
 
     ////////////////////////////////////////////////
 
@@ -339,12 +425,11 @@ function populatePages() {
 }
 
 spread.addEventListener('click', populatePages);
-aboutBtn.addEventListener('mouseenter', () => showPopup(0));
-aboutBtn.addEventListener('mouseout', () => hidePopup());
-scheduleBtn.addEventListener('mouseenter', () => showPopup(1));
-scheduleBtn.addEventListener('mouseout', () => hidePopup());
-visitingBtn.addEventListener('mouseenter', () => showPopup(2));
-visitingBtn.addEventListener('mouseout', () => hidePopup());
+aboutBtn.addEventListener('click', () => showPopup(0));
+scheduleBtn.addEventListener('click', () => showPopup(1));
+visitingBtn.addEventListener('click', () => showPopup(2));
+
+closePopupBtn.addEventListener('click', () => hidePopup());
 
 // Initially populate the pages with random images
 populatePages();
