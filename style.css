@@ -7,6 +7,7 @@ html {
     font-family: "Gerstner", sans-serif;
     font-size:20px;
     color:white;
+    color: black;
 }
 
 body {
@@ -28,11 +29,11 @@ body {
     text-transform: capitalize;
 }
 
-.about, .schedule, .visiting, .closePopup {
+.about, .schedule, .visiting, .purchase, .closePopup {
     cursor: pointer;
 }
 
-.about:hover, .schedule:hover, .visiting:hover {
+.about:hover, .schedule:hover, .visiting:hover, .purchase:hover {
     color:black;
 }
 
@@ -109,11 +110,15 @@ img {
     width:80%;
     max-height:100%;
     padding:1em;
-    background:white;
+    /* background:white; */
+    /* changed colorfor SPREAD II */
+    background: black;
     border: 1px solid black;
     overflow-y:scroll;
     scrollbar-color: #808080 transparent;
-    color:black;
+    /* color:black; */
+    /* changed colorfor SPREAD II */
+    color: white;
 }
 
 h1 {
