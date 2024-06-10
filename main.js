@@ -300,7 +300,7 @@ const texts = [
         "<ul>Wendy’s Subway</ul>" +
         "<li>379 Bushwick Ave, Brooklyn, NY</li>" +
         "<li>June 15–30, 10am–6pm</li>" +
-        "<li>Public programming, June 18, 6–8pm</li>",
+        "<li>Public programming, June 18, 4–6pm</li>",
 
     "<h1>Purchase</h1>" +
         "<p>Pre-order your copy of the Yale GD '24 Thesis Catalog <a href='https://yalethesis.bigcartel.com/product/yale-gd-24-thesis-catalog'>here</a>.</p>" +
